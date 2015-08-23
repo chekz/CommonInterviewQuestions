@@ -21,7 +21,7 @@ public class IsStringPalindromeTest {
 	
 	@Test
 	public void testThatStringIsNotAPalindrome() {
-		boolean notPalindrome = commonInterviewQuestions.isStringPalindrome("Not");
-		assertFalse(notPalindrome);
+		boolean isPalindrome = commonInterviewQuestions.isStringPalindrome("Not");
+		assertTrue(!isPalindrome);
 	}
 }
