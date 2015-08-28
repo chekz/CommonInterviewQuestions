@@ -22,7 +22,7 @@ public class PrintAllPermutationsOfStringRecursivlyTest {
 	public void printAllPermutationsOfStringRecursivlyTest() {
 		String stringToPermute = "abc";
 		String expectedResult = "abc\nacb\nbac\nbca\ncba\ncab";
-		commonInterviewQuestions.printPermutationsRecursive(stringToPermute,0);
+		commonInterviewQuestions.printPermutationsRecursivly(stringToPermute,0);
 		assertEquals(expectedResult, outContent.toString());
 	}
 }
