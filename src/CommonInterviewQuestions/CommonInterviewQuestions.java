@@ -26,7 +26,7 @@ public class CommonInterviewQuestions {
     }
            
     // Print all permutations of a string recursively
-    public void printPermutationsRecursivly(String word, int position) {
+    public void printPermutations(String word, int position) {
         if(word.length() == position + 1) {
                 System.out.println(word);
                 return;
@@ -35,11 +35,11 @@ public class CommonInterviewQuestions {
         StringBuilder newWord;
        
         for(int i = position; i < word.length() ; i++) {
-                newWord = new StringBuilder(word);
-                newWord.setCharAt(position, word.charAt(i));
-                newWord.setCharAt(i, word.charAt(position));
-               
-                printPermutationsRecursivly(newWord.toString(),position + 1);
+            newWord = new StringBuilder(word);
+            newWord.setCharAt(position, word.charAt(i));
+            newWord.setCharAt(i, word.charAt(position));
+           
+            printPermutations(newWord.toString(),position + 1);
         }
     }
     
