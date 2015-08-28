@@ -14,13 +14,13 @@ public class IsStringPalindromeTest {
 	}
 	
 	@Test
-	public void testThatStringIsAPalindrome() {
+	public void stringIsAPalindromeTest() {
 		boolean isPalindrome = commonInterviewQuestions.isStringPalindrome("piiiip");
 		assertTrue(isPalindrome);
 	}
 	
 	@Test
-	public void testThatStringIsNotAPalindrome() {
+	public void stringIsNotAPalindromeTest() {
 		boolean isPalindrome = commonInterviewQuestions.isStringPalindrome("Not");
 		assertTrue(!isPalindrome);
 	}

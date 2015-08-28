@@ -8,7 +8,7 @@ import java.io.PrintStream;
 import org.junit.Before;
 import org.junit.Test;
 
-public class AllPermutationsOfAStringRecursiveTest {
+public class PrintAllPermutationsOfStringRecursivlyTest {
 	private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
 	CommonInterviewQuestions commonInterviewQuestions;
 	
@@ -19,7 +19,7 @@ public class AllPermutationsOfAStringRecursiveTest {
 	}
 	
 	@Test
-	public void printAllPermutationsOfAStringRecursiveTest() {
+	public void printAllPermutationsOfStringRecursivlyTest() {
 		String stringToPermute = "abc";
 		String expectedResult = "abc\nacb\nbac\nbca\ncba\ncab";
 		commonInterviewQuestions.printPermutationsRecursive(stringToPermute,0);

@@ -8,7 +8,7 @@ import org.junit.runners.Suite.SuiteClasses;
 
 @SuiteClasses({
 	IsStringPalindromeTest.class,
-	RemoveCharacterFromStringTest.class
+	RemoveCharactersFromStringTest.class
 }
 )
 public class TestAllCommonInterviewQuestions {

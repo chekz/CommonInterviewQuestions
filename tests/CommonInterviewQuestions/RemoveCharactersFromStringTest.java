@@ -5,7 +5,7 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
-public class RemoveCharacterFromStringTest {
+public class RemoveCharactersFromStringTest {
 	CommonInterviewQuestions commonInterviewQuestions;
 	
 	@Before
@@ -14,9 +14,9 @@ public class RemoveCharacterFromStringTest {
 	}
 	
 	@Test
-	public void testCharacterGetsRemovedFromString() {
+	public void testCharactersGetsRemovedFromString() {
 		String testWord = "eHeeelloe";
-		String wordWithRemovedLetters = commonInterviewQuestions.removeCharacterFromString(testWord, 'e');
+		String wordWithRemovedLetters = commonInterviewQuestions.removeCharactersFromString(testWord, 'e');
 		String expectedResult = "Hllo";
 		
 		assertEquals(wordWithRemovedLetters, expectedResult);
