@@ -25,6 +25,9 @@ public class Main {
 		
 		/*char firstNonRepeatedCharacter = commonInterviewQuestions.getFirstNonRepeatedCharacter("HHeelliioo");
 		System.out.println(firstNonRepeatedCharacter);*/
+		
+		/*boolean isAnagram = commonInterviewQuestions.isAnagram("pop", "ppo");
+		System.out.println(isAnagram);*/
 
 	}
 }

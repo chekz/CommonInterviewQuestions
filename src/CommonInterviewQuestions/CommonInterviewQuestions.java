@@ -1,5 +1,7 @@
 package CommonInterviewQuestions;
 
+import java.util.Arrays;
+import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map.Entry;
 
@@ -143,5 +145,20 @@ public class CommonInterviewQuestions {
 		}
 		
 		throw new RuntimeException("Didn't find any non repeated character");
+	}
+	
+	// Check if two strings are anagrams of one another
+	public boolean isAnagram(String firstWord, String secondWord) {
+		if(firstWord.length() != secondWord.length()) {
+			return false;
+		}
+		
+		char[] firstWordChars = firstWord.toCharArray();
+		char[] secondWordChars = secondWord.toCharArray();
+		
+		Arrays.sort(firstWordChars);
+		Arrays.sort(secondWordChars);
+		
+		return Arrays.equals(firstWordChars, secondWordChars);
 	}
 }
