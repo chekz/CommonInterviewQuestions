@@ -144,6 +144,4 @@ public class CommonInterviewQuestions {
 		
 		throw new RuntimeException("Didn't find any non repeated character");
 	}
-	
-	
 }
