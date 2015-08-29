@@ -2,7 +2,7 @@ package CommonInterviewQuestions;
 
 public class CommonInterviewQuestions {
 	// Check if a string is a palindrome
-	public boolean isStringPalindrome(String word) {
+	public boolean isPalindrome(String word) {
 		String reverseWord = new StringBuilder(word).reverse().toString();
 
 		if (reverseWord.equals(word)) {
@@ -13,7 +13,7 @@ public class CommonInterviewQuestions {
 	}
 
 	// Get longest palindrome in a string
-	public String longestPalindrome(String string) {
+	public String getLongestPalindrome(String string) {
 		String longestPalindrome = "";
 		String longestPalindromeInSubstring = "";
 		
@@ -29,18 +29,18 @@ public class CommonInterviewQuestions {
 	}
 	
 	public String getLongestPalindromeInSubstring(String string) {
-		String longestPalindromeInSubString = "";
+		String longestPalindrome = "";
 		String tempString;
 		
 		for(int i = 0; i < string.length() ; i++) { 
 			tempString = string.substring(0, i + 1);
 			
-			if(isStringPalindrome(tempString)) {
-				longestPalindromeInSubString = tempString;
+			if(isPalindrome(tempString)) {
+				longestPalindrome = tempString;
 			}
 		}
 		
-		return longestPalindromeInSubString;
+		return longestPalindrome;
 	}
 
 	// Remove all occurrences of a character from a string
@@ -81,7 +81,7 @@ public class CommonInterviewQuestions {
 	 * word Fizz Multiples of 5 print out the word Buzz Multiples of 3 & 5 print
 	 * FizzBuzz
 	 */
-	public void fizzBuzzQuestion() {
+	public void fizzBuzz() {
 		String fizzBuzz = "";
 
 		for (int i = 1; i <= 100; i++) {
@@ -103,4 +103,16 @@ public class CommonInterviewQuestions {
 		}
 	}
 
+	// Count the number of times a character occurs in a string
+	public int getCharacterOccurences(String string, char character) {
+		int characterCounter = 0;
+		
+		for(int i = 0; i < string.length() ; i++) { 
+			if(string.charAt(i) == character) {
+				characterCounter++;
+			}
+		}
+		
+		return characterCounter;
+	}
 }
