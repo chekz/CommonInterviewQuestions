@@ -1,6 +1,5 @@
 package CommonInterviewQuestions;
 
-import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map.Entry;
 
@@ -120,7 +119,7 @@ public class CommonInterviewQuestions {
 		return characterCounter;
 	}
 	
-	// Find first non-repeated character of a given string
+	// Find first non-repeated character of a string
 	public char getFirstNonRepeatedCharacter(String word) {
 		char currentCharacter = '\0';
 		
@@ -130,12 +129,11 @@ public class CommonInterviewQuestions {
 			currentCharacter = word.charAt(i);
 			
 			if(characterOccuerences.containsKey(currentCharacter)) {
-				characterOccuerences.put(currentCharacter, (characterOccuerences.get(currentCharacter)) + 1);
+				characterOccuerences.put(currentCharacter, characterOccuerences.get(currentCharacter) + 1);
 			}
 			else {
 				characterOccuerences.put(currentCharacter, 1);
 			}
-			
 		}
 		
 		for(Entry<Character, Integer> entry : characterOccuerences.entrySet()) { 
@@ -144,6 +142,8 @@ public class CommonInterviewQuestions {
 			}
 		}
 		
-		return '\0';
+		throw new RuntimeException("Didn't find any non repeated character");
 	}
+	
+	
 }
