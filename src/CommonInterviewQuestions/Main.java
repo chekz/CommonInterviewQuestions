@@ -1,5 +1,8 @@
 package CommonInterviewQuestions;
 
+import java.util.HashMap;
+import java.util.concurrent.atomic.AtomicInteger;
+
 public class Main {
 	public static void main(String[] args) {
 		CommonInterviewQuestions commonInterviewQuestions = new CommonInterviewQuestions();
@@ -22,5 +25,9 @@ public class Main {
 	
 		/*int numberOfCharacterOccurences = commonInterviewQuestions.getCharacterOccurences("Hello", 'l');
 		System.out.println(numberOfCharacterOccurences);*/
+		
+		/*char firstNonRepeatedCharacter = commonInterviewQuestions.getFirstNonRepeatedCharacter("HHeelliioo");
+		System.out.println(firstNonRepeatedCharacter);*/
+
 	}
 }

@@ -1,5 +1,9 @@
 package CommonInterviewQuestions;
 
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.Map.Entry;
+
 public class CommonInterviewQuestions {
 	// Check if a string is a palindrome
 	public boolean isPalindrome(String word) {
@@ -114,5 +118,32 @@ public class CommonInterviewQuestions {
 		}
 		
 		return characterCounter;
+	}
+	
+	// Find first non-repeated character of a given string
+	public char getFirstNonRepeatedCharacter(String word) {
+		char currentCharacter = '\0';
+		
+		LinkedHashMap<Character, Integer> characterOccuerences = new LinkedHashMap<Character, Integer>();
+		
+		for(int i = 0; i < word.length(); i++) { 
+			currentCharacter = word.charAt(i);
+			
+			if(characterOccuerences.containsKey(currentCharacter)) {
+				characterOccuerences.put(currentCharacter, (characterOccuerences.get(currentCharacter)) + 1);
+			}
+			else {
+				characterOccuerences.put(currentCharacter, 1);
+			}
+			
+		}
+		
+		for(Entry<Character, Integer> entry : characterOccuerences.entrySet()) { 
+			if(entry.getValue() == 1) {
+				return entry.getKey();
+			}
+		}
+		
+		return '\0';
 	}
 }
