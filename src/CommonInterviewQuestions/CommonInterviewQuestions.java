@@ -1,8 +1,9 @@
 package CommonInterviewQuestions;
 
+import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.HashMap;
 import java.util.LinkedHashMap;
+import java.util.List;
 import java.util.Map.Entry;
 
 public class CommonInterviewQuestions {
@@ -77,6 +78,42 @@ public class CommonInterviewQuestions {
 
 			printPermutations(newWord.toString(), position + 1);
 		}
+	}
+	
+	//Print all permutations of a string iteratively 
+	public static void printPermutations(String word) {
+		if(word.length() == 0) {
+			throw new RuntimeException("There is no possible permutaitons");
+		}
+		
+		if(word.length() == 1) {
+			System.out.println(word);
+		}
+		
+		List<String> permutations = Arrays.asList(word.substring(0,1));
+		
+		for(int i = 1; i < word.length() ; i++) { 
+			permutations = mergeWord(permutations, word.charAt(i));
+		}
+		
+		for(int i = 0; i < permutations.size() ; i++) { 
+			System.out.println(permutations.get(i));
+		}
+	}
+	
+	// Puts new chracter at every position in every string in the list of permutations.
+	public static List<String> mergeWord(List<String> permutations, char character) {
+		List<String> newPermutations = new ArrayList<String>();
+		String newWord;
+		
+		for(int i = 0; i < permutations.size() ; i++) { 
+			for(int j = 0; j <= permutations.get(i).length(); j++) { 
+				newWord = permutations.get(i).substring(0, j) + character + permutations.get(i).substring(j);
+				newPermutations.add(newWord);
+			}
+		}
+		
+		return newPermutations;
 	}
 
 	/*

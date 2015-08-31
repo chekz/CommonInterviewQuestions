@@ -18,6 +18,8 @@ public class Main {
 		
 		/*commonInterviewQuestions.printPermutations("abc", 0);*/
 		
+		/*commonInterviewQuestions.printPermutations("Hello");*/
+		
 		/*commonInterviewQuestions.fizzBuzz();*/
 	
 		/*int numberOfCharacterOccurences = commonInterviewQuestions.getCharacterOccurences("Hello", 'l');
